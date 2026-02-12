@@ -13,13 +13,12 @@ The engine is designed around a key principle: **determinism through dependency 
 
 ## Who is this for?
 
-This documentation is for developers building integrations with grekt:
+This is internal documentation for grekt contributors and maintainers:
 
-- **Custom CLIs** - build specialized tools on top of cli-engine
-- **Browser tools** - use cli-engine in web-based artifact managers
-- **CI/CD integrations** - automate artifact operations in pipelines
-- **Test utilities** - use mock implementations for testing artifact workflows
-- **Editor plugins** - integrate grekt capabilities into IDEs
+- **Understanding the architecture** - how cli-engine is structured and why
+- **Contributing** - interfaces, contracts, and patterns to follow when adding features
+- **Reference** - schemas, modules, and import paths for day-to-day development
+- **Debugging** - how the pieces fit together when tracking down issues
 
 ## Module overview
 
