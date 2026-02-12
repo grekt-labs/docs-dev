@@ -13,12 +13,14 @@ The engine is designed around a key principle: **determinism through dependency 
 
 ## Who is this for?
 
-This is internal documentation for grekt contributors and maintainers:
+This documentation is for grekt contributors and developers building on top of cli-engine:
 
-- **Understanding the architecture** - how cli-engine is structured and why
-- **Contributing** - interfaces, contracts, and patterns to follow when adding features
+- **Contributors** - interfaces, contracts, and patterns to follow when adding features
+- **Integrations** - build editor plugins, CI/CD tools, or other non-competing tools on top of cli-engine
 - **Reference** - schemas, modules, and import paths for day-to-day development
 - **Debugging** - how the pieces fit together when tracking down issues
+
+> cli-engine is licensed under [BSL 1.1](https://mariadb.com/bsl11/). You can use it freely for any purpose except building a competing artifact manager. See the LICENSE file for details.
 
 ## Module overview
 
