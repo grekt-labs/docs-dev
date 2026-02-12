@@ -111,11 +111,13 @@ interface DownloadResult {
 
 ### Client types
 
-| Client | Registry | Transport |
-|--------|----------|-----------|
-| `DefaultRegistryClient` | registry.grekt.com | REST API (Edge Functions) |
-| `GitHubRegistryClient` | GitHub Container Registry | OCI Distribution Spec |
-| `GitLabRegistryClient` | GitLab Generic Packages | GitLab Package API |
+| Client | Registry | Transport | Exported |
+|--------|----------|-----------|----------|
+| `DefaultRegistryClient` | registry.grekt.com | REST API (Edge Functions) | Yes |
+| `GitHubRegistryClient` | GitHub Container Registry | OCI Distribution Spec | No (internal) |
+| `GitLabRegistryClient` | GitLab Generic Packages | GitLab Package API | Yes |
+
+> `GitHubRegistryClient` is used internally by the factory but not exported. Use `createRegistryClient()` to get the appropriate client.
 
 ### Factory
 

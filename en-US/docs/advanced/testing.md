@@ -4,7 +4,7 @@ cli-engine provides mock implementations for all core interfaces, making it stra
 
 ## Mock factories
 
-All mocks are available from the `test-utils` subpath:
+All mocks are available from the main export:
 
 ```typescript
 import {
@@ -12,7 +12,7 @@ import {
   createMockHttpClient,
   createMockShellExecutor,
   createMockTokenProvider
-} from '@grekt-labs/cli-engine/test-utils'
+} from '@grekt-labs/cli-engine'
 ```
 
 ### createMockFileSystem
@@ -103,8 +103,7 @@ function binaryResponse(data: Buffer | Uint8Array, status?: number): Response
 ### Testing artifact scanning
 
 ```typescript
-import { scanArtifact } from '@grekt-labs/cli-engine/artifact'
-import { createMockFileSystem } from '@grekt-labs/cli-engine/test-utils'
+import { scanArtifact, createMockFileSystem } from '@grekt-labs/cli-engine'
 
 const fs = createMockFileSystem({
   '/artifact/grekt.yaml': 'name: "@test/artifact"\nversion: 1.0.0\ndescription: Test artifact',
@@ -119,8 +118,7 @@ expect(result.manifest.name).toBe('@test/artifact')
 ### Testing config parsing
 
 ```typescript
-import { safeParseYaml } from '@grekt-labs/cli-engine/friendly-errors'
-import { ProjectConfigSchema } from '@grekt-labs/cli-engine/schemas'
+import { safeParseYaml, ProjectConfigSchema } from '@grekt-labs/cli-engine'
 
 const result = safeParseYaml('targets: [claude]', ProjectConfigSchema, 'grekt.yaml')
 
@@ -132,7 +130,7 @@ if (result.success) {
 ### Testing version operations
 
 ```typescript
-import { bumpVersion, compareSemver, sortVersionsDesc } from '@grekt-labs/cli-engine/version'
+import { bumpVersion, compareSemver, sortVersionsDesc } from '@grekt-labs/cli-engine'
 
 expect(bumpVersion('1.2.3', 'minor')).toBe('1.3.0')
 expect(compareSemver('2.0.0', '1.9.9')).toBe(1)

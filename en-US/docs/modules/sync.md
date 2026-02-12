@@ -15,6 +15,7 @@ interface SyncPlugin {
   preview(lockfile: Lockfile, projectRoot: string, options?: SyncOptions): SyncPreview
   getSyncPaths(): Record<Category, string> | null
   getTargetPaths(): TargetPaths | null
+  resolveTargetPath?(artifactId: string, category: Category, filePath: string): string
   setup?(projectRoot: string): void
 }
 ```

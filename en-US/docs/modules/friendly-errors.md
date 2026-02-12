@@ -17,8 +17,7 @@ Parses a YAML string and validates it against a Zod schema. Returns a `ParseResu
 ### Usage
 
 ```typescript
-import { safeParseYaml } from '@grekt-labs/cli-engine/friendly-errors'
-import { ProjectConfigSchema } from '@grekt-labs/cli-engine/schemas'
+import { safeParseYaml, ProjectConfigSchema } from '@grekt-labs/cli-engine'
 
 const content = fs.readFile("grekt.yaml")
 const result = safeParseYaml(content, ProjectConfigSchema, "grekt.yaml")

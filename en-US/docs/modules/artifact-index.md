@@ -53,7 +53,7 @@ Parses a serialized index back into an `ArtifactIndex` object.
 ## Usage example
 
 ```typescript
-import { generateIndex, serializeIndex } from '@grekt-labs/cli-engine/artifactIndex'
+import { generateIndex, serializeIndex } from '@grekt-labs/cli-engine'
 
 const index = generateIndex([
   {

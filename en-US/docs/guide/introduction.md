@@ -39,14 +39,20 @@ This is internal documentation for grekt contributors and maintainers:
 
 ## Import paths
 
-cli-engine uses subpath exports. Import modules via their subpath:
+Everything is exported from the main entry point:
 
 ```typescript
-import { FileSystem, EngineContext } from '@grekt-labs/cli-engine/core'
-import { CATEGORIES, CATEGORY_CONFIG } from '@grekt-labs/cli-engine/categories'
-import { ArtifactManifestSchema } from '@grekt-labs/cli-engine/schemas'
-import { scanArtifact } from '@grekt-labs/cli-engine/artifact'
-import { parseSource, createRegistryClient } from '@grekt-labs/cli-engine/registry'
-import { formatBytes, estimateTokens } from '@grekt-labs/cli-engine/formatters'
-import { safeParseYaml } from '@grekt-labs/cli-engine/friendly-errors'
+import {
+  FileSystem,
+  EngineContext,
+  CATEGORIES,
+  CATEGORY_CONFIG,
+  ArtifactManifestSchema,
+  scanArtifact,
+  parseSource,
+  createRegistryClient,
+  formatBytes,
+  estimateTokens,
+  safeParseYaml,
+} from '@grekt-labs/cli-engine'
 ```

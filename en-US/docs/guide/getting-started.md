@@ -18,8 +18,8 @@ pnpm add @grekt-labs/cli-engine
 cli-engine requires you to provide implementations for its core interfaces. Here's a minimal example:
 
 ```typescript
-import type { EngineContext } from '@grekt-labs/cli-engine/core'
-import { scanArtifact } from '@grekt-labs/cli-engine/artifact'
+import type { EngineContext, FileSystem, HttpClient, ShellExecutor, TokenProvider } from '@grekt-labs/cli-engine'
+import { scanArtifact } from '@grekt-labs/cli-engine'
 
 // 1. Create your interface implementations
 const fs: FileSystem = {
@@ -74,7 +74,7 @@ import {
   createMockHttpClient,
   createMockShellExecutor,
   createMockTokenProvider
-} from '@grekt-labs/cli-engine/test-utils'
+} from '@grekt-labs/cli-engine'
 
 const fs = createMockFileSystem({
   '/project/grekt.yaml': 'name: my-artifact\nversion: 1.0.0'
