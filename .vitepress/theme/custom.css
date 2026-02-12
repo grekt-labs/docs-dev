@@ -1,0 +1,27 @@
+/* ========================================
+   grekt Developer Docs - VitePress Overrides
+   ======================================== */
+
+@import '@grekt-labs/ori/brand.css';
+
+/* Brand color override for VitePress */
+:root {
+  --vp-c-brand-1: var(--grekt-primary-500);
+  --vp-c-brand-2: var(--grekt-primary-800);
+  --vp-c-brand-3: var(--grekt-primary-900);
+  --font-titles: var(--font-display);
+}
+
+/* Dark mode - near black background */
+.dark {
+  --vp-c-bg: #0a0a0a;
+  --vp-c-bg-soft: #111111;
+  --vp-c-bg-mute: #1a1a1a;
+  --vp-c-bg-alt: #0f0f0f;
+}
+
+/* Logo size */
+.VPNavBarTitle .logo {
+  height: 38px;
+  width: auto;
+}
